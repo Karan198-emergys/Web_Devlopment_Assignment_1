@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.banner {
+    background-image:url( "./images/bg-header-desktop.png");
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    border: 1px;
+}
+.banner-logo img{ 
+    height: 80px;
+    margin: 20px;
+    padding: 10px;    
+}
+.banner-slogan h1{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    color: rgb(92, 91, 91);
+    padding: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.banner-slogan p{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 200;
+    color: rgb(92, 91, 91);
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+.banner-button{
+    margin-top: 40px;
+    display: flex; 
+}
+.banner-button .ios-button button{
+    margin-left: 20px;
+    height: 40px;
+    width: 190px;
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 8px;
+    background-color: rgb(26, 202, 188);
+    border: 1px solid rgb(26, 202, 188);
+    border-radius: 30px;
+    box-shadow: 0.4px 3px 1px rgb(12, 146, 135);
+}
+.banner-button .Mac-button button{
+    margin-left: 20px;
+    height: 40px;
+    width: 190px;
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 8px;
+    background-color: rgb(61, 105, 248);
+    border: 1px solid rgb(61, 105, 248);
+    border-radius: 30px;
+    box-shadow: 0.4px 3px 1px rgb(11, 59, 216);
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 80px;
+    justify-content: space-around;
+}
+.clipboard-solution{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: rgb(92, 91, 91);
+    padding: 20px;
+    letter-spacing: 1px;
+}
+.clipboard-problem-statment p{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.accesibility{
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    align-items: center;
+    text-align: center;
+}
+.accesibility-name h2{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: rgb(92, 91, 91);
+
+
+}
+.accesibility-name p{
+    margin: 20px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: rgb(92, 91, 91);
+
+}
+.accessibility-device{
+    padding: 40px;
+    height: 500px;
+    width: 800px;
+overflow: hidden;}
+.accessibility-device img{
+    height: 500px;
+    width: 750px;
+}
+.tools{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.tool-topic h1{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: rgb(92, 91, 91);
+    text-align: center;
+}
+.tool-topic p{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    color: rgb(92, 91, 91);
+    text-align: center;
+    margin: 15px;
+}
+.tool{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 20px;
+}
+.tool > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px;
+}
+.tool img{
+    margin: 30px;
+}
+.tool h3{
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: rgb(92, 91, 91);
+    margin: 20px;
+
+}
+.tool p{
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    color: rgb(92, 91, 91);
+
+}
+.companies{
+    margin-top:70px;
+    display: flex;
+    justify-content: space-around;
+}
+.app-platform{
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+    flex-direction: column;
+}
+.availability{
+    margin: 10px;
+    text-align: center;
+}
+.availability h2{
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 700;
+    color: rgb(92, 91, 91);
+}
+.availability p{
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.Download-button{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+.Download-button .ios-button button{
+    margin-left: 20px;
+    height: 40px;
+    width: 190px;
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 8px;
+    background-color: rgb(26, 202, 188);
+    border: 1px solid rgb(26, 202, 188);
+    border-radius: 30px;
+    box-shadow: 0.4px 3px 1px rgb(12, 146, 135);
+}
+.Download-button .Mac-button button{
+    margin-left: 20px;
+    height: 40px;
+    width: 190px;
+    text-align: center;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 8px;
+    background-color: rgb(61, 105, 248);
+    border: 1px solid rgb(61, 105, 248);
+    border-radius: 30px;
+    box-shadow: 0.4px 3px 1px rgb(11, 59, 216);
+}
+footer {
+    color: rgb(159,171,178);
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left-footer{
+    display: flex;
+    justify-content:space-around;
+    gap: 60px;
+    align-items: center;
+}
+.left-footer li{
+    list-style: none;
+}
+.right-footer li{
+    list-style: none;
+    gap: 20px;
+}
+.right-footer li :hover{
+    color: aqua;
+}
+.footer-list li{
+    margin-bottom: 10px;
+}
+.right-footer{
+    display: flex;
+    align-items: center;
+}
+.right-footer li img{
+    height: 30px;
+}
+.logo img{
+    height: 60px;
+}
+@media only screen and (max-device-width: 375px){
+      .accessibility-device img{
+        height: 500px;
+      }
+      .tool{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .companies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 53px;
+        padding: 0px;
+      }
+      .banner-slogan h1{
+        font-size: 24px;
+      }
+      .Download-button{
+        display: flex;
+        flex-direction:column;
+      }
+      .Download-button .Mac-button button{
+        width: 250px;
+        letter-spacing: 1px;
+      }
+      .Download-button button{
+        gap: 7px;
+      }
+      .availability {
+        padding: 7px;
+      }
+      .Download-button .ios-button button{
+        width: 250px;
+        letter-spacing: 1px;
+      }
+      .banner-button{
+        display: flex;
+        flex-direction: column;
+      }
+      .footer{
+        display:flex;
+        flex-direction: column;
+      }
+
+}
