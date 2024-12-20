@@ -1,0 +1,11 @@
+/* CSS HEX */
+--black: #000000ff;
+--blue-green: #2195BFff;
+--space-cadet: #191A44ff;
+--redwood: #B06366ff;
+
+/* CSS HSL */
+--black: hsla(0, 0%, 0%, 1);
+--blue-green: hsla(196, 71%, 44%, 1);
+--space-cadet: hsla(239, 46%, 18%, 1);
+--redwood: hsla(358, 33%, 54%, 1);

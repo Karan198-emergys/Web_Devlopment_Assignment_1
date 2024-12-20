@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+}
+body {
+  overflow-x: hidden;
+  background-position: center;
+  background: fixed;
+  background-color: #ecfcff;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  background: rgba(198, 198, 198, 0.34);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(126, 125, 125, 0.34);
+}
+.navbar-list ul {
+  border: 1px solid rgba(126, 125, 125, 0.34);
+  border-radius: 1rem;
+  align-items: center;
+  height: 6vh;
+  width: 40vw;
+  justify-content: center;
+  background: rgba(119, 119, 119, 0.34);
+  backdrop-filter: blur(20px);
+  display: flex;
+  gap: 30px;
+}
+.navbar-list ul li {
+  font-family: "Lato";
+  font-weight: 400;
+  list-style: none;
+}
+.navbar-list ul li a {
+  text-decoration: none;
+}
+.navbar-list ul li :hover {
+  color: #0004f1;
+}
+.logo img {
+  height: 8vh;
+}
+.login-button button {
+  font-size: 1rem;
+  height: 5vh;
+  width: 8vw;
+  border: 1px solid rgb(5, 4, 170);
+  border-radius: 6px;
+  color: aliceblue;
+  background-color: rgb(5, 4, 170);
+}
+.login-button :hover {
+  cursor: cell;
+}
+.banner {
+  width: 100vw;
+  height: 100vh;
+}
+.banner img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  border: 2px 3px 45px solid rgb(5, 4, 170);
+}
+.about {
+  margin-top: 12vh;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+.about-slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.about-slogan h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.4rem;
+  text-decoration: dotted;
+}
+.about .about-slogan p {
+  margin-top: 1%;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  text-decoration: underline;
+}
+
+.cards {
+  margin: 3%;
+  display: flex;
+  justify-content: space-around;
+  gap: 3%;
+}
+.card1 {
+  margin-top: 1%;
+}
+.card2 {
+  margin-top: 4%;
+}
+.card3 {
+  margin-top: 6%;
+}
+.card {
+  position: relative;
+  width: 40%;
+  height: 20%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.card:hover {
+  transform: rotate(-0deg) scale(1.1);
+  box-shadow: 0 10px 37px rgba(0, 0, 0, 0.2);
+}
+.card-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 5%;
+  left: 10%;
+  transform: translate(-10%, -5%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  background: rgba(198, 198, 198, 0.34);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  box-sizing: border-box;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card:hover .card-content {
+  transform: translate(-10%, -5%) rotate(-0deg);
+  opacity: 1;
+}
+.footer-logo img {
+  height: 8vh;
+}
+.card-content .card-title {
+  font-size: 2.4rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  text-align: center;
+}
+.card-description {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+.speaker h1 {
+  margin: 8%;
+  margin-bottom: 4%;
+  font-style: italic;
+  letter-spacing: 0.4rem;
+  font-size: 2.4rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  text-align: center;
+}
+.speaker-slogan {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  text-decoration: underline;
+}
+
+.speaker1 {
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+  height: 40vh;
+  display: flex;
+  border-radius: 30px;
+  background: #e5fffb;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #e5fffb;
+}
+.speaker1 h2 {
+  margin: 2%;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+.speaker1 p {
+  margin: 2%;
+  font-size: 1rem;
+  font-family: "Lato";
+  font-weight: 400;
+}
+.speaker1-img {
+  height: 40vh;
+}
+.speaker1-img img {
+  height: 40vh;
+  object-fit: cover;
+}
+footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  width: 100vw;
+}
