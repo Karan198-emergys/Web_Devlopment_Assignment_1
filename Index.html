@@ -4,259 +4,324 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <title>DriveVerse</title>
   </head>
   <body>
+    <!-- Header sections -->
     <header>
-      <div class="logo">
-        <img src="./images/logo.png" alt="DriveVerse Logo" />
-      </div>
-      <nav class="navbar-list">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Speakers</a></li>
-          <li><a href="#">Schedules</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div class="login-button">
-        <button>Get Started</button>
+      <div class="container">
+        <div class="logo">
+          <img src="./images/logo.png" alt="DriveVerse Logo" />
+        </div>
+        <nav class="navbar">
+          <label for="toggler" class="navbar-toggler">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+          <input type="checkbox" id="toggler" class="toggler" />
+          <div class="menu">
+            <ul class="list">
+              <li><a href="#">Home</a></li>
+              <li><a href="about">About</a></li>
+              <li><a href="#">Speakers</a></li>
+              <li><a href="#">Schedules</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="login-button">
+          <button>Get Started</button>
+        </div>
       </div>
     </header>
 
-    <div class="banner">
-      <div class="banner-discription">
-        <div class="slogan">
-          <p>
-            Experience the Evolution <br />of Car's this Year <br />
-            January 2025 <br />
-          </p>
-          <p class="vintage-slogan" style="color: #d4af37">Vintage</p>
-          <p class="present-slogan" style="color: #4682b4">Present</p>
-          <p class="future-slogan" style="color: #00cdbbe4">future</p>
+    <!-- banner Sections -->
+    <div class="container">
+      <div class="banner">
+        <div class="banner-discription">
+          <div class="slogan">
+            <p>
+              Experience the Evolution <br />of Cars this Year <br />January
+              2025
+            </p>
+            <p class="vintage-slogan" style="color: #d4af37">Vintage</p>
+            <p class="present-slogan" style="color: #4682b4">Present</p>
+            <p class="future-slogan" style="color: #00cdbb">Future</p>
+          </div>
+          <div class="banner-button">
+            <button>Get Info</button>
+            <button>Buy Tickets</button>
+          </div>
         </div>
-        <div class="banner-button">
-          <button>Get Info</button>
-          <button>Buy Tickets</button>
-        </div>
-      </div>
-      <div class="banner-slideshow">
-        <div class="slide">
-          <img src="./images/banner-image.jfif" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="about">
-      <div class="about-slogan">
-        <h1>What are we Offering ...?</h1>
-        <p>Dicover What makes DriveVerse<br />ExtraOrdinary</p>
-      </div>
-      <div class="about-event">
-        <div class="vintage">
-          <h2>Timeless Classics</h2>
-          <ul>
-            <li>Experience rare , Iconic Model</li>
-            <li>Learn About history</li>
-            <li>Engage with Vintage car enthusiasts</li>
-          </ul>
-        </div>
-        <div class="present">
-          <h2>Modern Marvel's</h2>
-          <ul>
-            <li>Explore Cutting-edge car Designs</li>
-            <li>Witness Live Demonstration</li>
-            <li>
-              Discover the latest trend <br />
-              Automobile Industry
-            </li>
-          </ul>
-        </div>
-        <div class="future">
-          <h2>Futuristic Innovation's</h2>
-          <ul>
-            <li>Preview Concept cars of tomorrow</li>
-            <li>Learn About sustainable Technologies</li>
-            <li>Interact with leading Automobile innovators</li>
-          </ul>
+        <div class="banner-slideshow">
+          <div class="slide">
+            <img src="./images/banner-image.jfif" alt="Banner" />
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="speaker">
-      <h1>Legends of the road</h1>
-      <p class="speaker-slogan">Our Honorable Speakers</p>
-      <div class="speaker1 first">
-        <div class="speaker-discription">
-          <h2>Dutch Motor Sport: Racing Beyond Limits</h2>
-          <p>
-            Dutch Motor Sport is a global leader in organizing <br />high-octane
-            motorsport events Known for its passion for <br />
-            speed and precision, they bring together enthusiasts from across
-            <br />the world to experience thrilling races showcase modern
-            <br />racing technologies, and celebrate the evolution of motorsport
-            culture
-          </p>
+    <!-- about sections-->
+    <div class="container">
+      <div class="about">
+        <div class="about-slogan">
+          <h1>What are we Offering ...?</h1>
+          <p>Discover What makes DriveVerse<br />Extraordinary</p>
         </div>
-        <div class="speaker1-img">
-          <img src="./images/dutch.jfif" alt="" />
+        <div class="about-event">
+          <div class="vintage">
+            <h2>Timeless Classics</h2>
+            <ul>
+              <li>Experience rare, iconic models</li>
+              <li>Learn about history</li>
+              <li>Engage with vintage car enthusiasts</li>
+            </ul>
+          </div>
+          <div class="present">
+            <h2>Modern Marvels</h2>
+            <ul>
+              <li>Explore cutting-edge car designs</li>
+              <li>Witness live demonstrations</li>
+              <li>Discover the latest trends in the automobile industry</li>
+            </ul>
+          </div>
+          <div class="future">
+            <h2>Futuristic Innovations</h2>
+            <ul>
+              <li>Preview concept cars of tomorrow</li>
+              <li>Learn about sustainable technologies</li>
+              <li>Interact with leading automobile innovators</li>
+            </ul>
+          </div>
         </div>
-        <div class="speaker1-social"></div>
-      </div>
-      <div class="speaker1 second">
-        <div class="speaker1-img second-img">
-          <img src="./images/carsclubindia.jfif" alt="" />
-        </div>
-        <div class="speaker-discription">
-          <h2>Super Cars Club India: Driving Passion Forward</h2>
-          <p>
-            Super Cars Club India is a hub for luxury and performance car
-            enthusiasts. They specialize <br />in hosting exclusive events that
-            spotlight vintage classics, today's luxury cars, and the future of
-            <br />automotive engineering.
-          </p>
-        </div>
-
-        <div class="speaker1-social"></div>
       </div>
     </div>
 
-    <div class="events">
-      <div class="event-heading">
-        <h1>Event's To Held</h1>
-      </div>
-      <div class="event-cards">
-        <div class="event-underline"></div>
-        <div class="event-card">
-          <img src="./images/Car-Show-Flyer.jpg" alt="event1" />
-          <div class="event-info">
-            <h1>Timless Classics by : Auto Mania</h1>
-            <h2>
-              <i class="fa-solid fa-calendar-days" style="color: grey"></i>
-              Date :January 17 , 2025
-            </h2>
-            <h2><i class="fas fa-location" style="color: red"></i>Venue:</h2>
-            <p>Balewadi Stadium , Baner , Pune 411056</p>
-            <h2><i class="fa-solid fa-clock"></i> Timing :</h2>
-            <p>04:12-pm</p>
+    <!-- speakers Scehdules-->
+    <div class="container">
+      <div class="speaker">
+        <h1>Legends of the Road</h1>
+        <p class="speaker-slogan">Our Honorable Speakers</p>
+        <div class="speaker1 first">
+          <div class="speaker-discription">
+            <h2>Dutch Motor Sport: Racing Beyond Limits</h2>
+            <p>
+              Dutch Motor Sport is a global leader in organizing high-octane
+              motorsport events. Known for its passion for speed and precision,
+              they bring together enthusiasts from across the world to
+              experience thrilling races, showcase modern racing technologies,
+              and celebrate the evolution of motorsport culture.
+            </p>
           </div>
-          <div class="event-button">
-            <button>Get Event Detail</button>
-            <button>Add to calendar</button>
+          <img src="./images/dutch.jfif" alt="Dutch Motor Sport" />
+        </div>
+        <div class="speaker1 second">
+          <img src="./images/carsclubindia.jfif" alt="Cars Club India" />
+          <div class="speaker-discription">
+            <h2>Super Cars Club India: Driving Passion Forward</h2>
+            <p>
+              Super Cars Club India is a hub for luxury and performance car
+              enthusiasts. They specialize in hosting exclusive events that
+              spotlight vintage classics, today's luxury cars, and the future of
+              automotive engineering.
+            </p>
           </div>
         </div>
-        <div class="event-underline"></div>
-        <div class="event-card">
-          <img src="./images/bmw-event.jpg" alt="event1" />
-          <div class="event-info">
-            <h1>21st BMW Series by : BMW-Pune</h1>
-            <h2>
-              <i class="fa-solid fa-calendar-days" style="color: grey"></i>
-              Date :January 17 , 2025
-            </h2>
-            <h2><i class="fas fa-location" style="color: red"></i>Venue:</h2>
-            <span>Balewadi Stadium , Baner , Pune 411056</span>
-            <h2><i class="fa-solid fa-clock"></i> Timing :</h2>
-            <p>04:12-pm</p>
-          </div>
-          <div class="event-button">
-            <button>Get Event Detail</button>
-            <button>Add to calendar</button>
-          </div>
-        </div>
-        <div class="event-underline"></div>
-        <div class="event-card">
-          <img src="./images/future-car-event.png" alt="event1" />
-          <div class="event-info">
-            <h1>21st BMW Series by : BMW-Pune</h1>
-            <h2>
-              <i class="fa-solid fa-calendar-days" style="color: grey"></i>
-              Date :January 17 , 2025
-            </h2>
-            <h2><i class="fas fa-location" style="color: red"></i>Venue:</h2>
-            <p>Balewadi Stadium , Baner , Pune 411056</p>
-            <h2><i class="fa-solid fa-clock"></i>Timing :</h2>
-            <p>04:12-pm</p>
-          </div>
-          <div class="event-button">
-            <button>Get Event Detail</button>
-            <button>Add to calendar</button>
-          </div>
-        </div>
-        <div class="event-underline"></div>
       </div>
     </div>
 
-    <div class="contact-us">
-      <div class="contact-us-heading">Contact us For Event Booking</div>
-      <form action="#">
-        <div class="form-row">
-          <div class="input-data">
-            <input type="text" required />
-            <div class="underline"></div>
-            <label for="">First Name</label>
-          </div>
-          <div class="input-data">
-            <input type="text" required />
-            <div class="underline"></div>
-            <label for="">Last Name</label>
-          </div>
+    <!-- Event schedules-->
+    <div class="container">
+      <div class="events">
+        <div class="event-heading">
+          <h1>Events to be Held</h1>
         </div>
-        <div class="form-row">
-          <div class="input-data">
-            <input type="text" required />
-            <div class="underline"></div>
-            <label for="">Email Address</label>
+        <div class="event-cards">
+          <div class="event-underline">
+            <p></p>
           </div>
-          <div class="input-data">
-            <input type="text" required />
-            <div class="underline"></div>
-            <label for="">Phone Number</label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="input-data textarea">
-            <textarea rows="6" cols="40" required></textarea>
-            <br />
-            <div class="underline"></div>
-            <label for="">Address</label>
-            <br />
-            <div class="form-row submit-btn">
-              <div class="input-data">
-                <div class="inner"></div>
-                <input type="submit" value="submit" />
+          <div class="event-card event1">
+            <img src="./images/Car-Show-Flyer.jpg" alt="Event 1" />
+            <div class="event-info">
+              <div class="event-name">
+                <h2>Vintage Cars by Auto Mania</h2>
+              </div>
+              <div class="event-date">
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <b>Date : </b>January 11, 2025
+                </p>
+              </div>
+              <div class="event-venue">
+                <p>
+                  <i class="fa-solid fa-location-dot"> </i
+                  ><b> Venue :</b> Balewadi Stadium , baner , 411052-pune
+                </p>
+              </div>
+              <div class="event-timing">
+                <p>
+                  <i class="fa-solid fa-clock"></i> <b>Timing</b> : 04:12-Pm
+                </p>
+              </div>
+              <div class="event-button">
+                <button>Get Event Info</button>
+                <button>Add to Calendar</button>
               </div>
             </div>
           </div>
+          <div class="event-underline">
+            <p></p>
+          </div>
+          <div class="event-card event2">
+            <img src="./images/bmw-event.jpg" alt="Event 1" />
+            <div class="event-info">
+              <div class="event-name">
+                <h2>21st BMW Cars : BMW-pune</h2>
+              </div>
+              <div class="event-date">
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <b>Date : </b>January 11, 2025
+                </p>
+              </div>
+              <div class="event-venue">
+                <p>
+                  <i class="fa-solid fa-location-dot"> </i
+                  ><b> Venue :</b> Balewadi Stadium , baner , 411052-pune
+                </p>
+              </div>
+              <div class="event-timing">
+                <p>
+                  <i class="fa-solid fa-clock"></i> <b>Timing</b> : 04:12-Pm
+                </p>
+              </div>
+              <div class="event-button">
+                <button>Get Event Info</button>
+                <button>Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+          <div class="event-underline">
+            <p></p>
+          </div>
+          <div class="event-card event3">
+            <img src="./images/future-car-event.png" alt="Event 1" />
+            <div class="event-info">
+              <div class="event-name">
+                <h2>Masquerade Wheel : DMS</h2>
+              </div>
+              <div class="event-date">
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <b>Date : </b>January 11, 2025
+                </p>
+              </div>
+              <div class="event-venue">
+                <p>
+                  <i class="fa-solid fa-location-dot"> </i
+                  ><b> Venue :</b> Balewadi Stadium , baner , 411052-pune
+                </p>
+              </div>
+              <div class="event-timing">
+                <p>
+                  <i class="fa-solid fa-clock"></i> <b>Timing</b> : 04:12-Pm
+                </p>
+              </div>
+              <div class="event-button">
+                <button>Get Event Info</button>
+                <button>Add to Calendar</button>
+              </div>
+            </div>
+          </div>
+          <div class="event-underline">
+            <p></p>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
 
-    <footer>
-      <div class="footer-logo">
-        <img src="./images/logo.png" alt="footer-logo" />
+    <!--Contact-us -->
+    <div class="container">
+      <div class="contact-us">
+        <div class="contact-us-heading">Contact us For Event Booking</div>
+        <form action="#">
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" required />
+              <div class="underline"></div>
+              <label for="">First Name</label>
+            </div>
+            <div class="input-data">
+              <input type="text" required />
+              <div class="underline"></div>
+              <label for="">Last Name</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" required />
+              <div class="underline"></div>
+              <label for="">Email Address</label>
+            </div>
+            <div class="input-data">
+              <input type="text" required />
+              <div class="underline"></div>
+              <label for="">Phone Number</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-data textarea">
+              <textarea rows="6" cols="40" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Address</label>
+              <br />
+              <div class="form-row submit-btn">
+                <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" value="submit" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="footer-socials">
-        <a href="#" class="social-icon"
-          ><i class="fab fa-facebook" style="color: blue"></i
-        ></a>
-        <a href="#" class="social-icon"
-          ><i style="color: black" class="fab fa-github"></i
-        ></a>
-        <a href="#" class="social-icon"
-          ><i style="color: #1c77c2" class="fab fa-linkedin"></i
-        ></a>
+    </div>
+
+    <!-- footer section-->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="footer-logo" />
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li>Home</li>
+            <li>About-Event</li>
+            <li>Speakers</li>
+            <li>Schedules</li>
+            <li>Contact-us</li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"
+            ><i class="fab fa-facebook" style="color: blue"></i
+          ></a>
+          <a href="#" class="social-icon"
+            ><i style="color: black" class="fab fa-github"></i
+          ></a>
+          <a href="#" class="social-icon"
+            ><i style="color: #1c77c2" class="fab fa-linkedin"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
