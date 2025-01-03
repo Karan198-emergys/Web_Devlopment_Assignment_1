@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -18,28 +21,20 @@
     <!-- Header sections -->
     <header>
       <div class="container">
-        <div class="logo">
-          <img src="./images/logo.png" alt="DriveVerse Logo" />
-        </div>
-        <nav class="navbar">
-          <label for="toggler" class="navbar-toggler">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
-          </label>
-          <input type="checkbox" id="toggler" class="toggler" />
-          <div class="menu">
-            <ul class="list">
-              <li><a href="#">Home</a></li>
-              <li><a href="about">About</a></li>
-              <li><a href="#">Speakers</a></li>
-              <li><a href="#">Schedules</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="login-button">
-          <button>Get Started</button>
-        </div>
+        <input type="checkbox" id="nav-toggler">
+        <div class="logo"><img src="./images/logo.png" alt=""></div>
+        <ul class="links">
+          <li><a href="Home">Home</a></li>
+          <li><a href="Home">About-Event</a></li>
+          <li><a href="Home">Speakers</a></li>
+          <li><a href="Home">Schedules</a></li>
+          <li><a href="Home">Contact-us</a></li>
+        </ul>
+        <label for="nav-toggler" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
       </div>
     </header>
 
@@ -307,6 +302,8 @@
             <li>Home</li>
             <li>About-Event</li>
             <li>Speakers</li>
+          </ul>
+          <ul>
             <li>Schedules</li>
             <li>Contact-us</li>
           </ul>
