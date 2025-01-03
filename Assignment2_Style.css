@@ -15,51 +15,59 @@ body {
   padding: 0% 4% 0 4%;
 }
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 60px;
   border-bottom: 1.5px solid rgba(126, 125, 125, 0.34);
   background: linear-gradient(91deg, #fffef0, #e5eaff);
 }
 .logo img {
-  height: 8vh;
-}
-nav {
+  float: left;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-}
-.menu ul {
-  display: flex;
-  gap: 4%;
-  font-family: "Audiowide", serif;
-  font-size: 1.3rem;
-  list-style: none;
-  font-weight: 400;
-  text-decoration: none;
-}
-.menu ul li a {
-  text-decoration: none;
-  color: rgb(2, 135, 184);
-}
-
-.login-button button {
-  font-family: "Audiowide", serif;
-  font-size: 1rem;
+  margin: auto;
   height: 6vh;
-  width: 8vw;
-  border: 1px solid rgb(2, 135, 184);
-  border-radius: 6px;
-  color: aliceblue;
-  background-color: rgb(2, 135, 184);
 }
-.login-button :hover {
-  cursor: grab;
+header .links{
+  float: right;
+  display: flex;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style: none;
+  justify-content: space-around;
+}
+.links li > a {
+  text-decoration: none;
+  display: block;
+}
+#nav-toggler{
+  position: absolute;
+  top: -100px;
+}
+header .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-burger .line {
+  height: 5px;
+  border-radius: 3px;
+  width: 30px;
+  margin: 5px;
+  background-color:#4682b4;
+  transition: all .3s ease-in-out;
 }
 .banner {
   display: flex;
   width: 100%;
+  margin-top: 7%;
   height: 70vh;
 }
 .banner-discription {
@@ -202,6 +210,10 @@ footer .footer-socials {
   font-size: 2rem;
   list-style: none;
 }
+.footer-list {
+  display: flex;
+  gap: 5%;
+}
 footer .footer-list ul {
   font-family: "Nunito", serif;
   list-style: none;
@@ -210,6 +222,10 @@ footer .footer-list ul {
   letter-spacing: 1.3px;
   font-weight: 400;
   cursor: pointer;
+}
+footer .footer-list ul :hover {
+  cursor: pointer;
+  color: aqua;
 }
 
 .speaker h1 {
@@ -448,86 +464,50 @@ form .form-row .textarea {
   z-index: 1;
 }
 @media only screen and (max-width: 1000px) {
-  .navbar-toggler {
-    display: inline-block;
-  }
 
-  .menu {
-    display: none;
-    flex-direction: column;
-  }
-
-  .list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .login-button {
-    display: none;
-  }
 }
 
-@media (min-width: 769px) {
-  .menu {
-    position: relative;
-    position: static;
-    flex-direction: row;
-    gap: 4%;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  .navbar-toggler {
-    display: none;
-  }
-
-  .login-button {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 800px) {
+@media  screen and (max-width: 768px) {
   header .container {
     width: 100vw;
     justify-content: space-between;
   }
-  .login-button {
-    display: none;
+  header .icon-burger{
+    display: block;
   }
   .logo img {
     position: relative;
     left: 20px;
     height: 6vh;
   }
-  .menu {
-    width: 100%;
+  header .links {
+    float: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 3.6rem;
+    width: auto;
+    bottom: 100%;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(50px);
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    transition: all .4s ease-in-out;
+  }
+  header :checked ~ .links{
+    bottom: 0;
   }
   label {
     display: inline-flex;
-  }
-  .navbar-toggler {
-    display: inline-flex;
-    font-size: 2rem;
-    position: relative;
-    right: 20px;
-  }
-  #toggler :checked ~ .menu {
-  }
-  .list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-  }
-  .login-button {
-    display: none;
   }
   .banner {
     display: flex;
     flex-direction: column-reverse;
     gap: 2%;
+    margin-top: 20%;
     height: 104vh;
   }
   .banner-slideshow .slide img {
@@ -680,6 +660,9 @@ form .form-row .textarea {
     flex-direction: column;
   }
   .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     text-align: center;
     line-height: 2rem;
   }
