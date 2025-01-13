@@ -1,0 +1,310 @@
+:  #ce8ced,  #a364f5,  #ffffff,  #ff80f7 and  #4b00a1.
+
+.nunito-<uniquifier> {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.nunito-sans-<uniquifier> {
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+rgb(226, 222, 233)
+
+#dfc4eb
+
+rgb(255, 228, 253)
+
+#fff8fe
+
+
+( completed task Ui: <li>
+                <div class="todo_task">
+                  <div class="task_title">
+                    <p>Gym Membership</p>
+                    <div class="tasktime">Here will be the time</div>
+                  </div>
+                  <div class="task_category">
+                    <p style="font-size: 1rem">Gym</p>
+                  </div>
+                  <div class="task_description">
+                    <p style="text-overflow: ellipsis">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error cupiditate iure quisquam modi facere autem maxime
+                      quas sit. Aperiam quam delectus esse accusantium.
+                    </p>
+                  </div>
+                  <div class="task_button">
+                    <div class="task_modify">
+                      <button id="delete_task">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+)
+
+(active task Ui :<li>
+                <div class="todo_task">
+                  <div class="task_title">
+                    <p>Gym Membership</p>
+                    <div class="tasktime">Here will be the time</div>
+                  </div>
+                  <div class="task_category">
+                    <p style="font-size: 1rem">Gym</p>
+                  </div>
+                  <div class="task_description">
+                    <p style="text-overflow: ellipsis">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error cupiditate iure quisquam modi facere autem maxime
+                      quas sit. Aperiam quam delectus esse accusantium.
+                    </p>
+                  </div>
+                  <div class="task_button">
+                    <div class="task_modify">
+                      <button id="edit_task">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button id="delete_task">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </div>
+                    <div class="task_status">
+                      <button id="complete_status">
+                        <i class="fa-solid fa-check"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>)
+
+
+
+
+              window.addEventListener("load", () => {
+  const form = document.getElementById("add_form");
+  const Ongoing = document.getElementById("active-task_list");
+  const Completed = document.getElementById("completed-task_list");
+  let tasks = JSON.parse(localStorage.getItem("DBtodo")) || [];
+
+  (() => {
+    const active_ul = document.getElementById("active-task_list");
+    if (tasks.length === 0) {
+      active_ul.innerHTML = `<li style="font-size:2rem;padding:4%;margin-top:10%;color:#d6d6d6">No Task To Do</li>`;
+      return;
+    } else {
+      rendertask();
+    }
+
+    const complete_ul = document.getElementById("completed-task_list");
+    const completed_task = tasks.filter((task) => task.done === true);
+
+    if (completed_task.length === 0) {
+      complete_ul.innerHTML = `<li style="font-size:2rem;padding:4%;margin-top:10%;color:#d6d6d6">No Task Completed till Now</li>`;
+    } else {
+      RenderCompletedtask();
+    }
+  })();
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let taskname = document.getElementById("task_title").value;
+    let category = document.getElementById("categories").value;
+    let scheduleInput = document.getElementById("add_time").value;
+    let description = document.getElementById("add-task_description").value;
+
+    if (!taskname || !category || !scheduleInput) {
+      alert("All the fields are necessary");
+      return;
+    }
+
+    const schedule = new Date(scheduleInput);
+
+    if (isNaN(schedule.getTime())) {
+      alert("Please enter a valid Date and Time");
+      return;
+    }
+    const task = {
+      id: new Date().getTime(),
+      taskname: taskname,
+      category: category,
+      schedule: schedule.toISOString(),
+      description: description,
+      done: false,
+    };
+
+    tasks.push(task);
+    localStorage.setItem("DBtodo", JSON.stringify(tasks));
+    rendertask();
+    form.reset();
+  });
+
+  function rendertask() {
+    Ongoing.innerHTML = "";
+    let todos = JSON.parse(localStorage.getItem("DBtodo")) || [];
+
+    todos.sort((a, b) => new Date(a.schedule) - new Date(b.schedule));
+
+    todos.forEach((taski, index) => {
+      if (taski.done === true) {
+        return;
+      }
+      let taskitem = document.createElement("li");
+
+      taskitem.innerHTML = `
+                <div class="todo_task">
+                  <div class="task_title">
+                    <p class="editable" data-index="${index}">${taski.taskname}</p>
+                    <div class="tasktime">${new Date(taski.schedule).toLocaleString()}</div>
+                  </div>
+                  <div class="task_category">
+                    <p style="font-size: 1rem">${taski.category}</p>
+                  </div>
+                  <div class="task_description">
+                    <p class="editable" data-index="${index}" style="text-overflow: ellipsis;word-wrap: break-word;">${taski.description}</p>
+                  </div>
+                  <div class="task_button">
+                    <div class="task_modify">
+                      <button class="edit_task" data-index="${index}">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button class="delete_task" data-index="${index}">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </div>
+                    <div class="task_status">
+                      <button class="complete_status" data-index="${index}">
+                        <i class="fa-solid fa-check"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>`;
+      Ongoing.appendChild(taskitem)
+      taskitem.querySelectorAll('.editable').forEach(element => {
+        element.addEventListener('click', () => {
+          const index = element.getAttribute('data-index');
+          const currentText = element.textContent;
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.value = currentText;
+          element.innerHTML = '';
+          element.appendChild(input);
+          input.focus();
+
+          input.addEventListener('blur', () => {
+            const newText = input.value.trim();
+            if (newText) {
+              if (element.classList.contains('task_title')) {
+                tasks[index].taskname = newText;
+              } else {
+                tasks[index].description = newText;
+              }
+              localStorage.setItem("DBtodo", JSON.stringify(tasks));
+              rendertask();
+            } else {
+              element.textContent = currentText; 
+            }
+          });
+
+          input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+              input.blur();
+            }
+          });
+        });
+      });
+
+      taskitem.querySelector(".edit_task").addEventListener("click", () => {
+        editTask(index);
+      });
+
+      taskitem.querySelector(".delete_task").addEventListener("click", () => {
+        tasks.splice(index, 1);
+        localStorage.setItem("DBtodo", JSON.stringify(tasks));
+        rendertask();
+      });
+
+      taskitem.querySelector(".complete_status").addEventListener("click", () => {
+        tasks[index].done = true;
+        localStorage.setItem("DBtodo", JSON.stringify(tasks));
+        rendertask();
+        RenderCompletedtask();
+      });
+    });
+  }
+
+  function editTask(index) {
+    const taskToEdit = tasks[index];
+    const taskname = prompt("Edit task name:", taskToEdit.taskname);
+    const category = prompt("Edit category:", taskToEdit.category);
+    const scheduleInput = prompt("Edit schedule (YYYY-MM-DDTHH:MM):", new Date(taskToEdit.schedule).toISOString());
+    const description = prompt("Edit description:", taskToEdit.description);
+
+    if (taskname && category && scheduleInput) {
+      const schedule = new Date(scheduleInput);
+      if (!isNaN(schedule.getTime())) {
+        tasks[index] = {
+          ...taskToEdit,
+          taskname,
+          category,
+          schedule: schedule.toISOString(),
+          description,
+        };
+        localStorage.setItem("DBtodo", JSON.stringify(tasks));
+        rendertask();
+      } else {
+        alert("Please enter a valid Date and Time");
+      }
+    }
+  }
+
+  function RenderCompletedtask() {
+    Completed.innerHTML = "";
+    const completedTasks = tasks.filter(task => task.done === true);
+
+    if (completedTasks.length === 0) {
+      Completed.innerHTML = `<li style="font-size:2rem;padding:4%;margin-top:10%;color:#d6d6d6">No Task Completed till Now</li>`;
+      return;
+    }
+
+    completedTasks.forEach((taski) => {
+      let taskitem = document.createElement("li");
+      taskitem.innerHTML = `
+                <div class="todo_task" style="background-color:#ffd5d5">
+                  <div class="task_title">
+                    <p>${taski.taskname}</p>
+                    <div class="tasktime">${new Date(taski.schedule).toLocaleString()}</div>
+                  </div>
+                  <div class="task_category">
+                    <p style="font-size: 1rem">${taski.category}</p>
+                  </div>
+                  <div class="task_description">
+                    <p style="text-overflow: ellipsis;word-wrap: break-word;">${taski.description}</p>
+                  </div>
+                  <div class="task_button">
+                    <button class="delete_task" style="background-color:#ffd5d5" data-id="${taski.id}">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>`;
+      Completed.appendChild(taskitem);
+
+      taskitem.querySelector(".delete_task").addEventListener("click", () => {
+        tasks = tasks.filter(task => task.id !== taski.id);
+        localStorage.setItem("DBtodo", JSON.stringify(tasks));
+        rendertask();
+        RenderCompletedtask();
+      });
+    });
+  }
+});

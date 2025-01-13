@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", serif;
+  font-style: normal;
+}
+body {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  background-color: #fafafa;
+}
+.container {
+  margin: auto;
+  padding: 0 4% 0 4%;
+}
+header .container {
+  background-color: #a364f5;
+  width: 100vw;
+  margin: auto;
+  padding: 0 4% 0 4%;
+}
+li {
+  list-style: none;
+}
+.logo {
+  font-size: 2.4rem;
+  font-style: italic;
+  color: #190532;
+}
+.add_task {
+  margin: 4% 0 4% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+}
+.welcome h2 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.welcome h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.add-task_button {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.add-task_button button {
+  cursor: pointer;
+  height: 3rem;
+  width: 34%;
+  font-size: 1.2rem;
+  background-color: #4b00a1;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+}
+.add-task_button img {
+  height: 0.4rem;
+}
+.add-task_form {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  bottom: 10%;
+  padding: 1%;
+  width: 52%;
+  margin: auto;
+  border: 2px solid #fafafa;
+  display: none;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  box-shadow: 0px 2px 20px #ffffff;
+  background-color: #fafafa;
+  z-index: 1;
+}
+#add_form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5em;
+}
+.form_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.form_heading button {
+  cursor: pointer;
+  font-size: 1.6rem;
+  border: none;
+  background-color: #fafafa;
+}
+.task_name {
+  width: 80%;
+  margin: 2% 2% 0 2%;
+  padding-left: 1%;
+  height: 3.2rem;
+  background-color: #ffffff;
+  font-size: 2.2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+
+  border-radius: 0.8rem;
+}
+.task_name i {
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(239, 238, 238);
+}
+.task_name input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+}
+.category {
+  width: 80%;
+  margin: 2% 2% 0 2%;
+  height: 3.2rem;
+  font-size: 2.2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  border-radius: 0.8rem;
+}
+.category label {
+  font-size: 1.2rem;
+  width: 20%;
+}
+.category select {
+  height: 2.8rem;
+  width: 94%;
+  outline: none;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.4rem;
+}
+.add-task_time {
+  width: 80%;
+  margin: 2% 2% 0 2%;
+  height: 3.2rem;
+  font-size: 2.2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  border-radius: 0.8rem;
+}
+.add-task_time label {
+  font-size: 1.2rem;
+  width: 20%;
+}
+.add-task_time input {
+  height: 2.8rem;
+  width: 94%;
+  outline: none;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.4rem;
+}
+.description {
+  width: 80%;
+  margin: 2% 2% 0 2%;
+  height: 3.2rem;
+  font-size: 2.2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  border-radius: 0.8rem;
+}
+.description label {
+  font-size: 1.2rem;
+  width: 20%;
+}
+.description textarea {
+  width: 94%;
+  outline: none;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.4rem;
+}
+.submit {
+  width: 80%;
+  margin: 10% 2% 0 2%;
+  height: 3.2rem;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-radius: 0.8rem;
+}
+.save_task {
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 3.2rem;
+  width: 10rem;
+  background-color: #4b00a1;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+}
+.task_dashboard {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.active_task {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.active_counter {
+  border-bottom: 2px solid #a364f5;
+}
+.active_counter p {
+  padding: 2%;
+  color: #a364f5;
+  font-size: 1.2rem;
+}
+.completed_task {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.complete_counter {
+  border-bottom: 2px solid #ff80f7;
+}
+.complete_counter p {
+  padding: 2%;
+  color: #ff80f7;
+  font-size: 1.2rem;
+}
+.todo_task {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1%;
+  border: 2px solid #e1cfe8;
+  border-radius: 0.4rem;
+}
+.task_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task_title p {
+  font-size: 1.4rem;
+}
+#active-task_list {
+  height: 60vh;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding: 1%;
+}
+#active-task_list li {
+  margin: 1%;
+  list-style: none;
+}
+#completed-task_list {
+  height: 60vh;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding: 1%;
+  list-style: none;
+}
+#completed-task_list li {
+  margin: 1%;
+  list-style: none;
+}
+.task_category {
+  background-color: #e1cfe8;
+  border-radius: 0.4rem;
+  width: 20%;
+  margin: 1%;
+  padding: 1.6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfc4eb;
+}
+.task_button {
+  margin: 2%;
+  display: flex;
+  gap: 4%;
+  justify-content: end;
+}
+.task_modify {
+  width: 10%;
+}
+.task_status {
+  width: 20%;
+}
+.task_status button {
+  cursor: pointer;
+  background-color: #ff80f7;
+  border-radius: 0.4rem;
+  width: 100%;
+  padding: 2%;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ff80f7;
+}
+.task_modify {
+  display: flex;
+}
+.edit_task {
+  cursor: pointer;
+  font-size: 1.6rem;
+  border: none;
+  background-color: #ffffff;
+}
+.delete_task {
+  cursor: pointer;
+  font-size: 1.6rem;
+  border: none;
+  background-color: #ffffff;
+}
+
+.clear-all_button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  right: 10%;
+  width: 100%;
+}
+.clear-all_button button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  width: 10%;
+  color: #4b00a1;
+  background-color: #fafafa;
+  border: 2px solid #4b00a1;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+}

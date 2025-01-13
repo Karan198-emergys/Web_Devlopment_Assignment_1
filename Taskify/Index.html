@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="add_task">
+        <div class="welcome">
+          <h1>Welcome,Karan</h1>
+          <h2>Your, task</h2>
+        </div>
+        <div class="add-task_button">
+          <button id="open_form">
+            Add Task <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- This is the Add task Form -->
+    <div class="add-task_form">
+      <div class="form_heading">
+        <h1>Add the Task</h1>
+        <button id="close_form"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="add_form">
+        <div class="task_name">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <input
+            type="text"
+            id="task_title"
+            placeholder="Add task name..."
+            maxlength="24"
+          />
+        </div>
+        <div class="category">
+          <label for="category">Category :</label>
+          <select
+            name="category_name"
+            id="categories"
+            style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem"
+          >
+            <option value="home">Select the category</option>
+            <option value="home">
+              <p>Home</p>
+              <i class="fa-solid fa-house"></i>
+            </option>
+            <option value="Medical">Medical</option>
+            <option value="Office">Office</option>
+            <option value="Gym">Gym</option>
+            <option value="Family">Family</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Shopping">Shopping</option>
+          </select>
+        </div>
+        <div class="add-task_time">
+          <label for="add-task_time" class="time">Time :</label>
+          <input
+            type="datetime-local"
+            style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem"
+            id="add_time"
+          />
+        </div>
+        <div class="description">
+          <label for="description">Description :</label>
+          <textarea
+            name="task Description"
+            id="add-task_description"
+            rows="3"
+            placeholder="Write your message..."
+            style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem;"
+          ></textarea>
+        </div>
+        <div class="submit" id="add-form_button">
+          <button type="submit" id="add-form_submit" class="save_task">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="clear-all_button">
+        <button class="clear" id="clear_all">clear all</button>
+      </div>
+    </div>
+    <!-- this is the Task Display  List -->
+    <div class="container">
+      <div class="task_dashboard">
+        <div class="active_task">
+          <div class="active_counter">
+            <p>IN PROGRESS</p>
+          </div>
+          <div class="active list">
+            <ul id="active-task_list">
+              <!-- Here dynamically new task has been Added-->
+            </ul>
+          </div>
+        </div>
+
+        <div class="completed_task">
+          <div class="complete_counter">
+            <p>COMPLETED</p>
+          </div>
+          <div class="completed_list">
+            <ul id="completed-task_list">
+              <!-- Here Dynamically Completed has been added -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
