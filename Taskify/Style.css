@@ -105,7 +105,6 @@ li {
 }
 .task_name {
   width: 80%;
-  margin: 2% 2% 0 2%;
   padding-left: 1%;
   height: 3.2rem;
   background-color: #ffffff;
@@ -114,7 +113,6 @@ li {
   display: flex;
   align-items: center;
   gap: 2%;
-
   border-radius: 0.8rem;
 }
 .task_name i {
@@ -225,13 +223,19 @@ li {
   display: flex;
   flex-direction: column;
 }
-.active_counter {
-  border-bottom: 2px solid #a364f5;
-}
 .active_counter p {
   padding: 2%;
   color: #a364f5;
   font-size: 1.2rem;
+}
+.active_counter span {
+  width: 6%;
+  font-size: 1.5rem;
+  border: 1px solid #a364f5;
+  text-align: center;
+  border-radius: 2rem;
+  color: white;
+  background-color: #a364f5;
 }
 .completed_task {
   width: 40%;
@@ -240,14 +244,46 @@ li {
   flex-direction: column;
 }
 .complete_counter {
-  border-bottom: 2px solid #ff80f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.complete_counter .line {
+  border-bottom: 2px solid #dc6cd4 ;
+  width: 72%;
+  position: relative;
+  bottom: 24%;
+
+}
+.active_counter .line {
+  border-bottom: 2px solid #a364f5 ;
+  width: 67%;
+  position: relative;
+  bottom: 24%;
+  left: 0.2%;
+}
+.complete_counter span {
+  width: 6%;
+  font-size: 1.5rem;
+  border: 1px solid #dc6cd4;
+  text-align: center;
+  border-radius: 2rem;
+  color: white;
+  background-color: #dc6cd4;
 }
 .complete_counter p {
   padding: 2%;
-  color: #ff80f7;
+  color: #dc6cd4;
   font-size: 1.2rem;
 }
-.todo_task {
+#active-task_list .todo_task {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1%;
+  border: 2px solid #e1cfe8;
+  border-radius: 0.4rem;
+}
+#completed-task_list .todo_task {
   background-color: #ffffff;
   width: 100%;
   padding: 1%;
@@ -259,8 +295,8 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-.task_title p {
-  font-size: 1.4rem;
+.title_name p {
+  font-size: 2.4rem;
 }
 #active-task_list {
   height: 60vh;
@@ -283,22 +319,30 @@ li {
   margin: 1%;
   list-style: none;
 }
+#completed-task_list .task_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#complete_counter.title_name p {
+  font-size: 2.4rem;
+}
 .task_category {
-  background-color: #e1cfe8;
-  border-radius: 0.4rem;
-  width: 20%;
-  margin: 1%;
-  padding: 1.6%;
+  margin: 1% 1% 1% 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid #dfc4eb;
 }
 .task_button {
   margin: 2%;
   display: flex;
   gap: 4%;
   justify-content: end;
+}
+.active_counter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .task_modify {
   width: 10%;
@@ -308,7 +352,7 @@ li {
 }
 .task_status button {
   cursor: pointer;
-  background-color: #ff80f7;
+  background-color: #dc6cd4;
   border-radius: 0.4rem;
   width: 100%;
   padding: 2%;
@@ -316,16 +360,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ff80f7;
-}
-.task_modify {
-  display: flex;
-}
-.edit_task {
-  cursor: pointer;
-  font-size: 1.6rem;
-  border: none;
-  background-color: #ffffff;
+  border: 1px solid #dc6cd4;
 }
 .delete_task {
   cursor: pointer;
@@ -338,7 +373,7 @@ li {
   display: flex;
   justify-content: end;
   position: relative;
-  right: 10%;
+  right: 11%;
   width: 100%;
 }
 .clear-all_button button {
