@@ -92,7 +92,7 @@
             id="add-task_description"
             rows="3"
             placeholder="Write your message..."
-            style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem;"
+            style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem"
           ></textarea>
         </div>
         <div class="submit" id="add-form_button">
@@ -113,6 +113,8 @@
         <div class="active_task">
           <div class="active_counter">
             <p>IN PROGRESS</p>
+            <p class="line"></p>
+            <span id="active-list_count">0</span>
           </div>
           <div class="active list">
             <ul id="active-task_list">
@@ -124,6 +126,8 @@
         <div class="completed_task">
           <div class="complete_counter">
             <p>COMPLETED</p>
+            <p class="line"></p>
+            <span id="complete-list_count">0</span>
           </div>
           <div class="completed_list">
             <ul id="completed-task_list">
