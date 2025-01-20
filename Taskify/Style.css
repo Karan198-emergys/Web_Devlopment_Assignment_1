@@ -6,38 +6,69 @@
   font-style: normal;
 }
 body {
+  margin-top: 0;
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
-  background-color: #fafafa;
+  background-color: #f0f0f0;
 }
 .container {
-  margin: auto;
-  padding: 0 4% 0 4%;
-}
-header .container {
-  background-color: #a364f5;
-  width: 100vw;
   margin: auto;
   padding: 0 4% 0 4%;
 }
 li {
   list-style: none;
 }
-.logo {
-  font-size: 2.4rem;
-  font-style: italic;
-  color: #190532;
+.sort{
+  width: 22%;
+}
+#sortTask {
+  width: 80%;
+  border: none;
+  border-radius: 0.4rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  padding: 1%;
+  font-weight: 300;
+  outline: none;
+}
+.functionality {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
 }
 .add_task {
-  margin: 4% 0 4% 0;
+  margin: 1% 0 4% 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .welcome {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 60%;
+}
+.searchbar {
+  width: 50%;
+  padding-left: 1%;
+  height: 3rem;
+  background-color: #ffffff;
+  font-size: 2.2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  border-radius: 0.4rem;
+}
+.searchbar i {
+  font-size: 1.4rem;
+  color: rgb(199, 198, 198);
+}
+.searchbar input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
 }
 .welcome h2 {
   font-weight: 300;
@@ -56,7 +87,7 @@ li {
 .add-task_button button {
   cursor: pointer;
   height: 3rem;
-  width: 34%;
+  width: 62%;
   font-size: 1.2rem;
   background-color: #4b00a1;
   color: white;
@@ -72,13 +103,13 @@ li {
   right: 25%;
   bottom: 10%;
   padding: 1%;
-  width: 52%;
+  width: 54%;
   margin: auto;
   border: 2px solid #fafafa;
   display: none;
   flex-direction: column;
   border-radius: 0.8rem;
-  box-shadow: 0px 2px 20px #ffffff;
+  box-shadow: 0px 2px 2px #ffffff;
   background-color: #fafafa;
   z-index: 1;
 }
@@ -212,7 +243,7 @@ li {
   border-radius: 0.4rem;
 }
 .task_dashboard {
-  margin: 2%;
+  margin: 1%;
   display: flex;
   justify-content: center;
   gap: 2%;
@@ -249,14 +280,13 @@ li {
   justify-content: space-between;
 }
 .complete_counter .line {
-  border-bottom: 2px solid #dc6cd4 ;
+  border-bottom: 2px solid #dc6cd4;
   width: 72%;
   position: relative;
   bottom: 24%;
-
 }
 .active_counter .line {
-  border-bottom: 2px solid #a364f5 ;
+  border-bottom: 2px solid #a364f5;
   width: 67%;
   position: relative;
   bottom: 24%;
@@ -335,10 +365,16 @@ li {
 .task_button {
   margin: 2%;
   display: flex;
-  gap: 4%;
+  gap: 6%;
   justify-content: end;
 }
-.active_counter{
+.recycle_button {
+  background-color: #fff8fe;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.active_counter {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -354,8 +390,8 @@ li {
   cursor: pointer;
   background-color: #dc6cd4;
   border-radius: 0.4rem;
-  width: 100%;
-  padding: 2%;
+  width: 92%;
+  padding: 4%;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -385,4 +421,15 @@ li {
   border: 2px solid #4b00a1;
   height: 2.6rem;
   border-radius: 0.4rem;
+}
+#clear_blurbg{
+  height:100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.02rem);
+  z-index: 1;
+  display: none;
 }
