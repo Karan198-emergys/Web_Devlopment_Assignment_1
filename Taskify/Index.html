@@ -31,12 +31,30 @@
       <div class="add_task">
         <div class="welcome">
           <h1>Welcome,Karan</h1>
-          <h2>Your, task</h2>
+          <h2>Your, tasks</h2>
         </div>
-        <div class="add-task_button">
-          <button id="open_form">
-            Add Task <i class="fa-solid fa-plus"></i>
-          </button>
+        <div class="functionality">
+          <div class="sort">
+            <select id="sortTask">
+              <option value="Date" selected>Date</option>
+              <option value="ascending">A-Z</option>
+              <option value="descending">Z-A</option>
+            </select>
+          </div>
+          <div class="searchbar">
+            <input
+              type="text"
+              id="listSearch"
+              placeholder="Search your task..."
+              style="font-size: 1.4rem"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="add-task_button">
+            <button id="open_form">
+              Add Task <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -47,7 +65,7 @@
         <h1>Add the Task</h1>
         <button id="close_form"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <form id="add_form">
+      <form id="add_form" method="post">
         <div class="task_name">
           <i class="fa-solid fa-pen-to-square"></i>
           <input
@@ -56,6 +74,9 @@
             placeholder="Add task name..."
             maxlength="24"
           />
+          <span class="error" id="task_name_error"
+            ><!-- Here the task_name error will be displayed--></span
+          >
         </div>
         <div class="category">
           <label for="category">Category :</label>
@@ -70,12 +91,16 @@
               <i class="fa-solid fa-house"></i>
             </option>
             <option value="Medical">Medical</option>
+            <option value="personal">Personal</option>
             <option value="Office">Office</option>
             <option value="Gym">Gym</option>
             <option value="Family">Family</option>
             <option value="Outdoor">Outdoor</option>
             <option value="Shopping">Shopping</option>
           </select>
+          <span class="error" id="category_error"
+            ><!-- Here the category error will be displayed --></span
+          >
         </div>
         <div class="add-task_time">
           <label for="add-task_time" class="time">Time :</label>
@@ -84,6 +109,9 @@
             style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem"
             id="add_time"
           />
+          <span class="error" id="schedule_error"
+            ><!-- Here the schedule error will be displayed --></span
+          >
         </div>
         <div class="description">
           <label for="description">Description :</label>
@@ -94,6 +122,9 @@
             placeholder="Write your message..."
             style="font-size: 1rem; padding: 0 0.4rem 0 0.4rem"
           ></textarea>
+          <span class="error" id="discription_error"
+            ><!-- Here the category error will be displayed --></span
+          >
         </div>
         <div class="submit" id="add-form_button">
           <button type="submit" id="add-form_submit" class="save_task">
@@ -104,7 +135,7 @@
     </div>
     <div class="container">
       <div class="clear-all_button">
-        <button class="clear" id="clear_all">clear all</button>
+        <button class="clear" id="clear_all">Clear All</button>
       </div>
     </div>
     <!-- this is the Task Display  List -->
@@ -138,6 +169,56 @@
       </div>
     </div>
 
+    <!-- Pop ups -->
+
+    <div id="clear_blurbg">
+      <div
+        id="pop_up"
+        style="
+          height: 16%;
+          width: 24%;
+          background-color: white;
+          position: absolute;
+          top: 8%;
+          left: 40%;
+          padding: 1%;
+          border: none;
+          border-radius: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        "
+      >
+        <h3 style="text-align: center">
+          Are you sure you want to delete this task?
+        </h3>
+        <div
+          class="pop-up_button"
+          style="display: flex; justify-content: space-around; margin: 1%"
+        >
+          <button id="delete" style="width: 20%; height: 2rem">Yes</button>
+          <button id="cancel" style="width: 20%; height: 2rem">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- This is the Task popup task-->
+     <div class="popUp">
+      <div class="popTask">
+        <div class="popupTaskName">
+          <p>Taskify</p>
+        </div>
+        <div class="popupCategory">
+          <p>Office</p>
+        </div>
+        <div class="popUpSchedule">
+          <p>12-12-1222 12-12--12--12</p>
+        </div>
+        <div class="popupDescription">
+          <p>The Peoject has to be submitted by Today Itself</p>
+        </div>
+      </div>
+     </div>
     <script src="Script.js"></script>
   </body>
 </html>
