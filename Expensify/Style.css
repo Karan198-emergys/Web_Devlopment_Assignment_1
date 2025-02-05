@@ -1,0 +1,741 @@
+:root {
+  /* ======= Background Colors ======= */
+  --bg-main: rgba(
+    249,
+    249,
+    251,
+    1
+  ); /* Main background color for the entire app */
+  --bg-sidebar: rgba(236, 239, 244, 1); /* Sidebar background color */
+
+  /* ======= Text Colors ======= */
+  --text-primary: rgba(
+    58,
+    61,
+    64,
+    1
+  ); /* Main text color for headings and important text */
+  --text-secondary: rgba(
+    108,
+    117,
+    125,
+    1
+  ); /* Secondary text color for less prominent text */
+
+  /* ======= Primary and Secondary Colors ======= */
+  --primary-color: rgb(
+    0,
+    204,
+    255
+  ); /* Main action color (e.g., buttons, highlights) */
+  --secondary-color: rgba(
+    130,
+    106,
+    237,
+    1
+  ); /* Secondary action color (used for hover effects) */
+
+  /* ======= Accent Colors ======= */
+  --accent-orange: rgba(
+    255,
+    155,
+    80,
+    1
+  ); /* Used for alerts, warnings, or highlights */
+  --accent-blue: rgba(
+    82,
+    169,
+    255,
+    1
+  ); /* Used for informational elements or links */
+  --accent-green: rgba(
+    138,
+    255,
+    80,
+    1
+  ); /* Used for success indicators (e.g., positive trends) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-size: 1rem;
+}
+body {
+  font-family: "Poppins", serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+ul {
+  list-style: none;
+}
+ul li {
+  list-style: none;
+}
+.container {
+  margin: 0% 6% 0% 6%;
+}
+header {
+  background-color: var(--bg-sidebar);
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0.4rem;
+}
+.welcomePanel {
+  margin: 2% 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  width: 73%;
+}
+.userProfile i {
+  font-size: 2.4rem;
+}
+.UsernameTxt :first-child {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.searchBar {
+  position: relative;
+  display: flex;
+  width: 36%;
+  border-radius: 3rem;
+}
+.searchInput {
+  padding: 0 10% 0 4%;
+  height: 3rem;
+  outline: none;
+  border: 2px solid var(--bg-main);
+  width: 100%;
+  border-radius: 3rem;
+}
+.searchInput::placeholder {
+  color: #bcbbbb;
+}
+.searchBar i {
+  position: absolute;
+  left: 88%;
+  top: 18%;
+  font-size: 2rem;
+  color: #bcbbbb;
+}
+.mainAction_Button {
+  display: flex;
+  width: 32%;
+  gap: 8%;
+  justify-content: center;
+}
+#add_Expense {
+  height: 3rem;
+  width: 15%;
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  color: #ffffff;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+  box-shadow: 0px 0px 0px 4px rgba(229, 172, 255, 0.253);
+}
+#add_Income {
+  height: 3rem;
+  width: 15%;
+  background-color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+  color: #ffffff;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+  box-shadow: 0px 0px 0px 4px rgb(121 242 142 / 25%);
+}
+#add_Expense i {
+  width: 12px;
+}
+#add_Expense:hover {
+  width: 51%;
+  transition-duration: 0.2s;
+}
+#add_Expense:hover i {
+  transform: translateY(-800%);
+  transition-duration: 0.2s;
+}
+#add_Expense::before {
+  position: absolute;
+  content: "Add Expense";
+  bottom: -20%;
+  font-size: 0rem;
+}
+#add_Expense:hover::before {
+  bottom: unset;
+  opacity: 1;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+}
+#add_Income i {
+  width: 12px;
+}
+#add_Income:hover {
+  width: 51%;
+  transition-duration: 0.2s;
+}
+#add_Income:hover i {
+  transform: translateY(-800%);
+  transition-duration: 0.2s;
+}
+#add_Income::before {
+  position: absolute;
+  content: "Add Income";
+  bottom: -20%;
+  font-size: 0rem;
+}
+#add_Income:hover::before {
+  bottom: unset;
+  opacity: 1;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+}
+.heroSection {
+  margin: 2% 0 0 0;
+  display: flex;
+  gap: 4%;
+}
+.statisticsGraph {
+  padding: 1%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 204, 255, 0.3),
+    0px 0px 34px 3px rgba(255, 40, 88, 0.1);
+  border: none;
+  border-radius: 2rem;
+  height: 42vh;
+  width: 69%;
+}
+
+.TransactionCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 42vh;
+  width: 50%;
+}
+
+.incomeCard {
+  color: var(--accent-green);
+  box-shadow: 0px 4px 14px rgba(138, 255, 80, 0.3),
+    0px 0px 34px 3px rgba(189, 189, 189, 0.253);
+  border-radius: 2rem;
+  height: 20vh;
+  width: 95%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4%;
+}
+
+.ExpenseCard {
+  color: var(--primary-color);
+  box-shadow: 0px 4px 14px rgba(0, 204, 255, 0.3),
+    0px 0px 34px 3px rgba(189, 189, 189, 0.253);
+  border-radius: 2rem;
+  height: 20vh;
+  width: 95%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4%;
+}
+
+.incomeContent {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
+.expenseContent {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
+.balance_section {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  width: 50%;
+}
+.income_amount {
+  font-size: 2rem;
+}
+.income_Heading {
+  font-size: 2rem;
+}
+.expense_Heading {
+  font-size: 2rem;
+}
+.spent_Section {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  width: 50%;
+}
+.exepense_amount {
+  font-size: 2rem;
+}
+.expenseLogo img {
+  height: 3rem;
+}
+.incomeLogo img {
+  height: 3rem;
+}
+.exCardList {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  gap: 2rem;
+}
+.inCardList {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#expenseForm {
+  position: absolute;
+  top: 5%;
+  z-index: 1;
+  width: 50%;
+  margin: 2% 25% 2% 25%;
+  height: 80vh;
+  border-radius: 0.6rem;
+  padding: 1%;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0px 0px 6px 6px rgba(223, 223, 223, 0.25);
+  background-color: #f8f8f8;
+}
+.exForm_Heading {
+  font-size: 2.2rem;
+  color: grey;
+  font-weight: 600;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+.expenseFormHeading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4% 0 2%;
+}
+.formContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  margin: 4% 2% 0 2%;
+}
+.expenseName {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  border: 2px solid rgb(207, 207, 207);
+  padding: 0.5% 2% 0.5% 2%;
+  border-radius: 0.6rem;
+}
+.expenseTitle {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+::placeholder {
+  color: rgb(192, 191, 191);
+}
+#edit_icon {
+  font-size: 2.2rem;
+  color: rgb(192, 191, 191);
+}
+.amount {
+  display: flex;
+  gap: 2%;
+}
+#expense_amount {
+  width: 50%;
+  height: 3rem;
+  border: 2px solid rgb(207, 207, 207);
+  outline: none;
+  border-radius: 0.6rem;
+  padding: 0 2% 0 2%;
+}
+#payment_Mode {
+  width: 50%;
+  height: 3rem;
+  border: 2px solid rgb(207, 207, 207);
+  outline: none;
+  border-radius: 0.6rem;
+  padding: 0 2% 0 2%;
+}
+.checkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2% 0 0 0;
+}
+.checkWrapper label {
+  cursor: pointer;
+  width: 30%;
+  border: 1px solid rgb(207, 207, 207);
+  display: flex;
+  padding: 2%;
+  gap: 2%;
+  border-radius: 0.6rem;
+  position: relative;
+  justify-content: center;
+  color: #bcbbbb;
+}
+.checkWrapper label input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.socialWrapper:hover {
+  border: 1px solid rgba(128, 90, 213, 1);
+}
+.businessWrapper:hover {
+  border: 1px solid rgba(30, 72, 124, 1);
+}
+.personalWrapper:hover {
+  border: 1px solid rgba(46, 139, 87, 1);
+}
+input[type="radio"]:checked + .businessContent {
+  color: rgba(30, 72, 124, 1);
+}
+input[type="radio"]:checked + .personalContent {
+  color: rgba(46, 139, 87, 1);
+}
+input[type="radio"]:checked + .socialContent {
+  color: rgba(128, 90, 213, 1);
+}
+.expense_DateInput {
+  display: flex;
+  gap: 5%;
+}
+.expense_DateInput input {
+  width: 80%;
+  height: 3rem;
+  font-size: 1rem;
+  border: 2px solid rgb(207, 207, 207);
+  border-radius: 0.6rem;
+  padding: 0 2% 0 2%;
+  outline: none;
+}
+.expense_DateInput Label {
+  font-size: 1.6rem;
+  width: 20%;
+  color: grey;
+}
+.expense_CategoryInput {
+  display: flex;
+}
+.expense_CategoryInput label {
+  font-size: 1.6rem;
+  color: grey;
+  width: 25%;
+}
+.expense_CategoryInput select {
+  width: 80%;
+  height: 3rem;
+  font-size: 1rem;
+  border: 2px solid rgb(207, 207, 207);
+  border-radius: 0.6rem;
+  padding: 0 2% 0 2%;
+  outline: none;
+}
+.exsubmit_button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 8% 0 0 0;
+}
+#Close_exForm {
+  background-color: #f8f8f8;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#Close_exForm i {
+  font-size: 2.2rem;
+}
+#expense_submitButton {
+  border: none;
+  border-radius: 0.6rem;
+  width: 24%;
+  font-size: 1.4rem;
+  color: #ffffff;
+  height: 3rem;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 4px rgba(229, 172, 255, 0.253);
+}
+#incomeForm {
+  width: 50%;
+  height: 40vh;
+  background-color: #ffffff;
+  color: grey;
+  margin: 0% 22% 0 23%;
+  position: absolute;
+  top: 10%;
+  display: none;
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0px 0px 0px 4px rgba(229, 172, 255, 0.253);
+  z-index: 1;
+  flex-direction: column;
+}
+.inForm_Content {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+.inFormHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2% 0 2%;
+}
+.inFormHead label {
+  font-size: 2rem;
+}
+.source_check {
+  margin: 2% 0 0 0;
+  padding: 0 2% 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.source_check label {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bcbbbb;
+  border-radius: 0.6rem;
+  padding: 2%;
+  width: 30%;
+  cursor: pointer;
+}
+.source_check input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  appearance: none;
+}
+#salary_Source:hover {
+  border-color: var(--accent-green);
+}
+#finance_Source:hover {
+  border-color: var(--accent-orange);
+}
+#outsource_Source:hover {
+  border-color: var(--primary-color);
+}
+
+input[type="radio"]:checked + .salary_content {
+  color: var(--accent-green);
+}
+input[type="radio"]:checked + .finance_Content {
+  color: var(--accent-orange);
+}
+input[type="radio"]:checked + .outsource_Content {
+  color: var(--primary-color);
+}
+.income_Payment {
+  margin: 2% 0 0 0;
+  display: flex;
+  gap: 2%;
+  width: 100%;
+  padding: 0 2% 0 2%;
+}
+.income_Payment input {
+  height: 3rem;
+  width: 50%;
+  outline: none;
+  border: 1px solid #bcbbbb;
+  border-radius: 0.6rem;
+  padding: 0 2% 0 2%;
+}
+.income_Button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 6% 0 0 0;
+  padding: 0 2% 0 0;
+}
+#income_submitButton {
+  border: none;
+  border-radius: 0.6rem;
+  width: 24%;
+  font-size: 1.4rem;
+  color: #ffffff;
+  height: 3rem;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 4px rgba(229, 172, 255, 0.253);
+}
+#Close_inForm {
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#Close_inForm i {
+  font-size: 2.2rem;
+}
+.expenseList {
+  display: flex;
+  align-items: center;
+  height: 28vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 4% 0 4% 0;
+  position: relative;
+}
+.expensesCards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 5px 1%;
+  margin: 0 40px;
+  width: calc(100% - 10%);
+  height: 100%;
+  gap: 4%;
+}
+.card {
+  min-width: 26%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.6rem;
+  color: grey;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 1%;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.cardArrow i {
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.cardArrow #cardLeft_arrow {
+  position: absolute;
+  left: 1%;
+}
+.cardArrow #cardRight_arrow {
+  position: absolute;
+  right: 1%;
+}
+.cardHead {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.title_name {
+  font-size: 1.6rem;
+}
+.cardDelete i {
+  cursor: pointer;
+  color: rgb(253, 90, 90);
+  font-size: 1.6rem;
+}
+.CardContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.expense_money {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: black;
+}
+.category_time {
+  display: flex;
+  justify-content: space-between;
+  padding: 12% 0 0 0;
+}
+.amountType {
+  border: 2px solid rgba(0, 204, 255, 0.3);
+  margin: 8% 0 0 0px;
+  padding: 1%;
+  border-radius: 3rem;
+  background-color: rgba(0, 204, 255, 0.3);
+}
+#exDelete_card {
+  cursor: pointer;
+  background-color: #f8f8f8;
+  border: none;
+}
+#incomeExpenseChart {
+  width: 100%;
+  height: 100%;
+}
+.clear-all_button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  right: 11%;
+  width: 100%;
+}
+.clear-all_button button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  width: 10%;
+  color: #4b00a1;
+  background-color: #fafafa;
+  border: 2px solid #4b00a1;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+}
+#clear_blurbg {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.02rem);
+  z-index: 1;
+  display: none;
+}

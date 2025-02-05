@@ -1,0 +1,216 @@
+<header>
+      <div class="container">
+        <div class="logo">Personal Expense Tracker</div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="welcomePanel">
+        <div class="welcome">
+          <div class="userProfile">
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <div class="UsernameTxt">
+            <p>Welcome,</p>
+            <p class="username">UserName</p>
+          </div>
+        </div>
+        <div class="searchBar">
+          <input
+            type="text"
+            id="searchTransaction"
+            class="searchInput"
+            placeholder="Search your Transaction Here..."
+            style="font-family: 'Poppins', serif"
+          />
+          <i class="fa-brands fa-searchengin"></i>
+        </div>
+        <div class="mainAction_Button">
+          <button id="expense" type="button">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button id="Income" type="button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="heroSection">
+        <div class="statisticsGraph">Here will be the Statistic section</div>
+        <div class="TransactionCards">
+          <div class="incomeCard">
+            <div class="income_Heading">Balance</div>
+            <div class="incomeContent">
+              <div class="balance_section">
+                <div class="incomeLogo">
+                  <img src="./images/Income.png" alt="incomeLogo" />
+                </div>
+                <div id="income_Amount" class="income_amount">$0</div>
+              </div>
+              <div class="inCardList">
+                <ul>
+                  <li>Salary : <span id="salary_Total">$0</span></li>
+                  <li>Finance : <span id="finance_Total">$0</span></li>
+                  <li>Out source : <span id="source_Total">$0</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ExpenseCard">
+            <div class="expense_Heading">Expense</div>
+            <div class="expenseContent">
+              <div class="spent_Section">
+                <div class="incomeLogo">
+                  <img src="./images/expense.png" alt="incomeLogo" />
+                </div>
+                <div id="expense_Amount" class="exepense_amount">$0</div>
+              </div>
+              <div class="exCardList">
+                <ul>
+                  <li>business :<span id="business_Total">$0</span></li>
+                  <li>personal : <span id="personal_Total">$0</span></li>
+                  <li>Social : <span id="social_Total">$0</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="expenseList">
+        
+      </div>
+    </div>
+
+
+    // this is the Expense Adding Form 
+    <div class="expenseForm">
+      <form action="" id="expense_Submit">
+        <div class="expenseFormHeading">
+          <label for="expense_Submit" class="exForm_Heading">Add Expense</label>
+          <div class="exForm_CloseButton">
+            <button type="button" id="Close_exForm">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="formContent">
+          <div class="expenseName">
+            <i class="fa-solid fa-file-pen" id="edit_icon"></i>
+            <input
+              type="text"
+              id="exNameInput"
+              class="expenseTitle"
+              placeholder="Add your expense Name"
+            />
+          </div>
+          <div class="payment">
+            <div class="amount">
+              <input
+                type="number"
+                name="payment"
+                value="expense"
+                id="expense_amount"
+                placeholder="Enter the amount"
+              />
+              <input
+                type="text"
+                name="payment"
+                id="payment_Mode"
+                placeholder="Mode of payment"
+              />
+            </div>
+          </div>
+
+          <div class="expense_DateInput">
+            <label for="expense_Time">Date :</label>
+            <input
+              type="datetime-local"
+              id="expense_TimeInput"
+              name="date"
+              value="date"
+            />
+          </div>
+          <div class="expense_CategoryInput">
+            <label for="expenseCategroy_Input">Category :</label>
+            <select name="expenseCategory" id="expenseCategroy_Input">
+              <option value="">Select your option</option>
+              <option value="Food_Groceries">🛒Food / Groceries</option>
+              <option value="rent_mortgage">🏠Rent/Mortgage</option>
+              <option value="utilities_bills">🔌Utilities / Bills</option>
+              <option value="transportation">🚗 Transportation</option>
+              <option value="medical_healthcare">
+                🏥 Medical / Healthcare
+              </option>
+              <option value="shopping_entertainment">
+                🛍️Shopping / Entertainment
+              </option>
+              <option value="savings_investment">
+                💰Savings / Investments
+              </option>
+            </select>
+          </div>
+          <div class="type">
+            <div class="checkWrapper">
+              <label class="businessWrapper" for="businessRadio">
+                <input
+                  type="radio"
+                  value="business"
+                  id="businessRadio"
+                  name="type"
+                />
+                <div class="businessContent">
+                  <span id="buisness_type">Business</span>
+                </div>
+              </label>
+              <label class="personalWrapper" for="personalRadio">
+                <input
+                  type="radio"
+                  value="personal"
+                  id="personalRadio"
+                  name="type"
+                />
+                <div class="personalContent">
+                  <span id="personal_type">Personal</span>
+                </div>
+              </label>
+              <label class="socialWrapper" for="socialRadio">
+                <input
+                  type="radio"
+                  value="social"
+                  id="socialRadio"
+                  name="type"
+                />
+                <div class="socialContent">
+                  <span id="social_type">Social</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="exsubmit_button">
+            <button id="expense_submitButton">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+    // card Code is written here 
+
+
+     <div class="card">
+            <div class="CardContent">
+              <div class="cardHead">
+                <div class="title_name">Netflix</div>
+                <div class="cardDelete"><button type="button" id="exDelete_card"><i class="fa-solid fa-xmark"></i></button></div>
+              </div>
+              <div class="expense_money">$400</div>
+              <div class="category_time">
+                <div class="cardCategory">🚗 Transportation</div>
+                <div class="expense_Time">15/2/2025, 9:54:00 am</div>
+              </div>
+              <div class="amountType"></div>
+            </div>
+          </div>
